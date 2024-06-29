@@ -71,4 +71,5 @@ const fetchProducts = async () => {
       setLoading(false);
     }
   };
-  
+
+  if (loading) return <div>Loading...</div>;
