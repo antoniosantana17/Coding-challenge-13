@@ -73,3 +73,12 @@ const fetchProducts = async () => {
   };
 
   if (loading) return <div>Loading...</div>;
+
+  const nextProduct = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+  };
+  
+  const prevProduct = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
+  };
+  
